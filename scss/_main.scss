@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 100%;
+}
+/***buttons style***/
+.btn {
+  @include font($family: "Ubuntu", $size: 14px);
+  text-decoration: none;
+  color: $btn_text-color;
+  background-color: $btn_background-color;
+  &:hover {
+    background-color: $btn-hover_background-color;
+    cursor: pointer;
+  }
+}
+
+/***HEADER***/
+header {
+  background-image: url(../img/header_background_v1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  section {
+    margin: 0;
+    position: absolute;
+    top: 435px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h1 {
+      @include font($weight: 500, $size: 24px);
+      letter-spacing: 0.5px;
+      color: $links-color;
+      margin-bottom: 30px;
+    }
+    .btn-top {
+      padding: 12px 60px 16px 63px;
+      font-size: 15px;
+    }
+  }
+}
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  nav {
+    display: flex;
+    width: 59%;
+    justify-content: space-around;
+    a {
+      @include font($weight: 700);
+      padding-left: 5px;
+      padding-top: 18px;
+      color: $links-color;
+      text-decoration: none;
+      &:hover {
+        color: $btn_background-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.logo {
+  img {
+    width: 232px;
+    height: auto;
+  }
+}
+
+/*** MAIN***/
+main {
+  max-width: 66%;
+  margin: 0 auto;
+}
+h1 {
+  text-align: right;
+  @include font($weight: 500, $size: 24px);
+  margin: 21px 0 0 0;
+}
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+
+  input {
+    margin-right: 6px;
+    margin-top: 20px;
+    width: 200px;
+    height: 37px;
+    border: 1.5px solid $border-color;
+    &::placeholder {
+      padding-left: 20px;
+      color: black;
+    }
+    &:hover {
+      background-color: $btn_background-color;
+    }
+  }
+}
+/***post-list***/
+.post-list {
+  article {
+    display: flex;
+    background-color: $article_background-color;
+    margin-bottom: 20px;
+    img {
+      width: 302px;
+      height: auto;
+      padding: 10px;
+    }
+    .post {
+      .post-description {
+        color: $post_description-color;
+        padding-top: 20px;
+        padding-left: 5px;
+        padding-bottom: 11px;
+        border-bottom: 1px solid $border-color;
+        @include font($size: 12px);
+      }
+      h3 {
+        @include font($weight: 700, $size: 19px);
+        padding-top: 6px;
+        color: $btn_background-color;
+      }
+      p {
+        padding-top: 4px;
+        line-height: 160%;
+        @include font($family: "Ubuntu", $weight: 300, $size: 15px);
+        letter-spacing: 0.3px;
+      }
+    }
+    .btn {
+      padding: 10px 75px 13px 74px;
+      float: right;
+      margin-right: 21px;
+      margin-top: 23px;
+    }
+  }
+}
+/***about***/
+.about {
+  h1 {
+    margin: 64px 15px 0 0;
+  }
+  p {
+    @include font($weight: 300, $size: 15px);
+    padding-bottom: 24px; //26
+    padding-left: 14px;
+    line-height: 152%;
+  }
+  img {
+    width: 98.5%;
+    height: auto;
+    padding-left: 15px;
+    padding-bottom: 37px;
+  }
+}
+/***contact-form***/
+.contact-form {
+  h4 {
+    text-align: right;
+    @include font($weight: 500, $size: 15px);
+    padding-top: 6px;
+  }
+  form {
+    margin-top: 30px;
+    .float {
+      min-height: 93px;
+      .contact-form__full-name {
+        float: left;
+        width: 49%;
+      }
+      .contact-form__email {
+        float: right;
+        width: 50%;
+      }
+    }
+    .contact-form__question {
+      input {
+        height: 120px;
+      }
+      label {
+        margin-top: 20px;
+        padding-left: 80%;
+      }
+    }
+    label {
+      text-align: right;
+      padding-left: 74%;
+      color: $btn_background-color;
+      @include font($family: "Cantare");
+    }
+    input {
+      width: 100%;
+      height: 50px;
+      margin-top: 5px;
+      border: 1px solid $border-color;
+      &:hover {
+        background-color: $btn_background-color;
+      }
+    }
+    .btn {
+      padding: 10px 82px 13px;
+      float: right;
+      margin-right: 0px;
+      margin-top: 22px;
+    }
+  }
+}
+
+/***FOOTER***/
+footer {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  span {
+    @include font($family: "Cantare", $size: 14px);
+  }
+}

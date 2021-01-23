@@ -1,0 +1,13 @@
+$btn_background-color: #01acac;
+$btn-hover_background-color: #0066cb;
+$btn_text-color: #efffff;
+$border-color: #607d8b;
+$links-color: #ececec;
+$article_background-color: #efefef;
+$post_description-color: #ff1e45;
+
+@mixin font($family: "Roboto", $weight: 400, $size: 16px) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}
